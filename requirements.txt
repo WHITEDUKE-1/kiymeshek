@@ -1,0 +1,10 @@
+# Flask
+Flask
+Flask-SQLAlchemy
+
+# Database
+SQLAlchemy
+psycopg2-binary
+
+# Others
+python-dotenv
