@@ -1,6 +1,7 @@
 # Flask
 Flask
 Flask-SQLAlchemy
+Flask-JWT-Extended
 
 # Database
 SQLAlchemy
