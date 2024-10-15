@@ -10,3 +10,4 @@ def init_db(app):
 # Bárshe modeller
 from .user_model import User
 from .role_model import Role
+from .category_model import Category

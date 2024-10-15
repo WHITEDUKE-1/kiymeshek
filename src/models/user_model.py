@@ -9,7 +9,8 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String, nullable=True)
     social_networks = db.Column(db.JSON)
-    role_id = db.Column(db.Integer, nullable=False)
+    # role_id = db.Column(db.Integer, nullable=False)
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.role_id'))
     created_at = db.Column(db.DateTime, nullable=False, default=db.func.now())
 
     def __init__(self, username: str, email: str, password: str, social_networks: dict, role_id: int):

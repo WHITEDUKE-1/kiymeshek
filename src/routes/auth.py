@@ -53,7 +53,7 @@ def login():
     user = User.query.filter_by(username=username).first_or_404("username is not found")
 
     if user.username == username and user.password == sha256(password.encode()).hexdigest():
-        access_token = create_access_token(identity=username, expires_delta=timedelta(days=3))
+        access_token = create_access_token(identity=user.id, expires_delta=timedelta(days=3))
         return jsonify(access_token=access_token)
     else:
         return({"msg": "username or password incorrect"})
