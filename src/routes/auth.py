@@ -62,6 +62,6 @@ def login():
 @auth_bp.get("/get-me")
 @jwt_required()
 def get_me():
-    username = get_jwt_identity()
-    user = User.query.filter_by(username=username).first_or_404("identity is not found")
+    user_id = get_jwt_identity()
+    user = User.query.filter_by(username=user_id).first_or_404("identity is not found")
     return jsonify(user.to_dict())

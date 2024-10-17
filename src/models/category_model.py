@@ -4,7 +4,7 @@ class Category(db.Model):
     __tablename__ = "categoties"
 
     category_id = db.Column(db.Integer, primary_key=True)
-    category = db.Column(db.String, not_null=True, unique=True)
+    category = db.Column(db.String, nullable=True, unique=True)
 
     def __init__(self, category_name: str) -> None:
         self.category = category_name
