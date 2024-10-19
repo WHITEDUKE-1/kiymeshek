@@ -12,3 +12,4 @@ from .user_model import User
 from .role_model import Role
 from .category_model import Category
 from .article_model import Article
+from .comment_model import Comment
